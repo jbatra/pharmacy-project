@@ -2,5 +2,5 @@
 
 public class AppSettingsConfiguraion
 {
-    public required string EFConnectionString { get; set; }
+    public string EFConnectionString { get; set; }
 }

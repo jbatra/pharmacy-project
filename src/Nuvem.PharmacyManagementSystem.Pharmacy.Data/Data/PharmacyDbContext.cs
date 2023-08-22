@@ -1,9 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 
 namespace Nuvem.PharmacyManagementSystem.Pharmacy.Data.Data
 {   
 public partial class PharmacyDbContext : DbContext
 {   
+    public string connString {get; set;}
     public PharmacyDbContext()
     {}
 
@@ -15,12 +17,7 @@ public partial class PharmacyDbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        //TODO: The service configrattion in Pgram and/or factory class not configuring the DbContext...
-         if (!optionsBuilder.IsConfigured)
-            {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer(@"Server=DESKTOP-EPGKLH7\SQLEXPRESS_2022;Initial Catalog=PharmacyManagementStore;User ID=jodi;Password=dallas;TrustServerCertificate=True;");
-            }
+        optionsBuilder.UseSqlServer(connString);
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
