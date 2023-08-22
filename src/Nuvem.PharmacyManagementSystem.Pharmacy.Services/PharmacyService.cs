@@ -13,7 +13,6 @@ public class PharmacyService : IPharmacyService
 {
     private readonly IPharmacyRepository _pharmacyRepository;
     private readonly IMapper _mapper;
-    //private readonly Mapper _PersonMapper;
 
     public PharmacyService(IPharmacyRepository pharmacyRepository, IMapper mapper)
     {

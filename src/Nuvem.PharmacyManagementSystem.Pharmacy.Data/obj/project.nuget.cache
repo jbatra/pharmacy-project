@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jU/DqSDOssrcWukheq+nE3tId1HI7C2u0keBHHTu6WpCUvnd4nlB5XlzumfBzQWjOuY2dgE0DEEEGwd3bjyvsQ==",
+  "dgSpecHash": "CrqtsAxqWtqNy2vjE4X1lqqWEKGLwHORosVlHnMy8WhdEPhtl4GwoRT8iHzPaeZ72BRezKJrcu4E96BP4pwgJQ==",
   "success": true,
-  "projectFilePath": "C:\\Coding\\Github\\pharmacy-project\\pharmacy-project\\src\\Nuvem.PharmacyManagementSystem.Pharmacy.Data\\Nuvem.PharmacyManagementSystem.Pharmacy.Data.csproj",
+  "projectFilePath": "c:\\Coding\\Github\\pharmacy-project\\pharmacy-project\\src\\Nuvem.PharmacyManagementSystem.Pharmacy.Data\\Nuvem.PharmacyManagementSystem.Pharmacy.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jbatr\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\jbatr\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
