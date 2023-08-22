@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TNvLmgCxGMCdrl5+hAIgCYmqnpuIw2T/t4tGksJIU57Ch2FuK7k7ZjAvBoE2Mx8tZDPhk2g6M0leqqzlARSyxg==",
+  "dgSpecHash": "QXLEQecVKDBqlyhRjLM1urGxwI0iI9Px5HT5Z+CjP0wa8qD0x/xV+lY5wu4ZBKx7x/d/PIfmjiJTAkBld/smNw==",
   "success": true,
-  "projectFilePath": "c:\\Coding\\src\\Nuvem.PharmacyManagementSystem.Pharmacy.Api\\Nuvem.PharmacyManagementSystem.Pharmacy.Api.csproj",
+  "projectFilePath": "C:\\Coding\\Github\\pharmacy-project\\pharmacy-project\\src\\Nuvem.PharmacyManagementSystem.Pharmacy.Api\\Nuvem.PharmacyManagementSystem.Pharmacy.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jbatr\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\jbatr\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

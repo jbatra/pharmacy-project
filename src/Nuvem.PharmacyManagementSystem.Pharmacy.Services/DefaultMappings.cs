@@ -8,12 +8,7 @@ namespace Nuvem.PharmacyManagementSystem.Pharmacy.Services
     {
         public DefaultMappings()
         {
-            CreateMap<Data.EFEntities.Pharmacy, PharmacyModel>();
-            CreateMap<PharmacyModel, Data.EFEntities.Pharmacy>();
-            //.ReverseMap();
-           // CreateMap<IEnumerable<Data.EFEntities.Pharmacy>, IEnumerable<PharmacyModel>>().ReverseMap();
-           // CreateMap<List<Data.EFEntities.Pharmacy>, List<PharmacyModel>>().ReverseMap();            
-                    
+            CreateMap<Data.EFEntities.Pharmacy, PharmacyModel>().ReverseMap();
         }
     }
     

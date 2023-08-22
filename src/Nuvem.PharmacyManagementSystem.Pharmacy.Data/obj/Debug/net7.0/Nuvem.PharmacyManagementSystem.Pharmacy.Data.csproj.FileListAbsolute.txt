@@ -12,3 +12,17 @@ C:\Coding\src\Nuvem.PharmacyManagementSystem.Pharmacy.Data\obj\Debug\net7.0\refi
 C:\Coding\src\Nuvem.PharmacyManagementSystem.Pharmacy.Data\obj\Debug\net7.0\Nuvem.PharmacyManagementSystem.Pharmacy.Data.pdb
 c:\Coding\src\Nuvem.PharmacyManagementSystem.Pharmacy.Data\obj\Debug\net7.0\Nuvem.PharmacyManagementSystem.Pharmacy.Data.genruntimeconfig.cache
 c:\Coding\src\Nuvem.PharmacyManagementSystem.Pharmacy.Data\obj\Debug\net7.0\ref\Nuvem.PharmacyManagementSystem.Pharmacy.Data.dll
+C:\Coding\Github\pharmacy-project\pharmacy-project\src\Nuvem.PharmacyManagementSystem.Pharmacy.Data\bin\Debug\net7.0\Nuvem.PharmacyManagementSystem.Pharmacy.Data.deps.json
+C:\Coding\Github\pharmacy-project\pharmacy-project\src\Nuvem.PharmacyManagementSystem.Pharmacy.Data\bin\Debug\net7.0\Nuvem.PharmacyManagementSystem.Pharmacy.Data.runtimeconfig.json
+C:\Coding\Github\pharmacy-project\pharmacy-project\src\Nuvem.PharmacyManagementSystem.Pharmacy.Data\bin\Debug\net7.0\Nuvem.PharmacyManagementSystem.Pharmacy.Data.dll
+C:\Coding\Github\pharmacy-project\pharmacy-project\src\Nuvem.PharmacyManagementSystem.Pharmacy.Data\bin\Debug\net7.0\Nuvem.PharmacyManagementSystem.Pharmacy.Data.pdb
+C:\Coding\Github\pharmacy-project\pharmacy-project\src\Nuvem.PharmacyManagementSystem.Pharmacy.Data\obj\Debug\net7.0\Nuvem.PharmacyManagementSystem.Pharmacy.Data.csproj.AssemblyReference.cache
+C:\Coding\Github\pharmacy-project\pharmacy-project\src\Nuvem.PharmacyManagementSystem.Pharmacy.Data\obj\Debug\net7.0\Nuvem.PharmacyManagementSystem.Pharmacy.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Coding\Github\pharmacy-project\pharmacy-project\src\Nuvem.PharmacyManagementSystem.Pharmacy.Data\obj\Debug\net7.0\Nuvem.PharmacyManagementSystem.Pharmacy.Data.AssemblyInfoInputs.cache
+C:\Coding\Github\pharmacy-project\pharmacy-project\src\Nuvem.PharmacyManagementSystem.Pharmacy.Data\obj\Debug\net7.0\Nuvem.PharmacyManagementSystem.Pharmacy.Data.AssemblyInfo.cs
+C:\Coding\Github\pharmacy-project\pharmacy-project\src\Nuvem.PharmacyManagementSystem.Pharmacy.Data\obj\Debug\net7.0\Nuvem.PharmacyManagementSystem.Pharmacy.Data.csproj.CoreCompileInputs.cache
+C:\Coding\Github\pharmacy-project\pharmacy-project\src\Nuvem.PharmacyManagementSystem.Pharmacy.Data\obj\Debug\net7.0\Nuvem.PharmacyManagementSystem.Pharmacy.Data.dll
+C:\Coding\Github\pharmacy-project\pharmacy-project\src\Nuvem.PharmacyManagementSystem.Pharmacy.Data\obj\Debug\net7.0\refint\Nuvem.PharmacyManagementSystem.Pharmacy.Data.dll
+C:\Coding\Github\pharmacy-project\pharmacy-project\src\Nuvem.PharmacyManagementSystem.Pharmacy.Data\obj\Debug\net7.0\Nuvem.PharmacyManagementSystem.Pharmacy.Data.pdb
+C:\Coding\Github\pharmacy-project\pharmacy-project\src\Nuvem.PharmacyManagementSystem.Pharmacy.Data\obj\Debug\net7.0\Nuvem.PharmacyManagementSystem.Pharmacy.Data.genruntimeconfig.cache
+C:\Coding\Github\pharmacy-project\pharmacy-project\src\Nuvem.PharmacyManagementSystem.Pharmacy.Data\obj\Debug\net7.0\ref\Nuvem.PharmacyManagementSystem.Pharmacy.Data.dll
