@@ -16,7 +16,6 @@ Assembly dataAssembly = Assembly.Load("Nuvem.PharmacyManagementSystem.Pharmacy.D
 
 builder.Services.AddAutoMapper(apiAssembly,servicesAssembly);
 
-//TODO: Not working...not configuring DBContext
 builder.Services.AddDbContext<PharmacyDbContext>(options =>
         options.UseSqlServer(builder.Configuration.GetConnectionString("EFConnectionString"),
         ef => ef.MigrationsAssembly("Nuvem.PharmacyManagementSystem.Pharmacy.Data")));
