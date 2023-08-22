@@ -13,12 +13,13 @@ namespace Nuvem.PharmacyManagementSystem.Pharmacy.Data
     public class PharmacyRepository : IPharmacyRepository
     {
         private readonly PharmacyDbContext _dbContext;
-        //private readonly IOptions<AppSettingsConfiguraion> _appConfig;
+        private readonly AppSettingsConfiguraion _appConfig;
         
-        public PharmacyRepository()     //IOptions<AppSettingsConfiguraion> appSettingsConfiguraion)
+        public PharmacyRepository(AppSettingsConfiguraion appConfig)
         {
             _dbContext = new PharmacyDbContext();  
-            //_appConfig = appSettingsConfiguraion;            
+            _appConfig = appConfig;
+            _dbContext.connString = _appConfig.EFConnectionString;
         }        
 
         public async Task<List<EFEntities.Pharmacy>> GetAllAsync()

@@ -21,17 +21,13 @@ builder.Services.AddDbContext<PharmacyDbContext>(options =>
         options.UseSqlServer(builder.Configuration.GetConnectionString("EFConnectionString"),
         ef => ef.MigrationsAssembly("Nuvem.PharmacyManagementSystem.Pharmacy.Data")));
 
-//TODO: Not working...
-// builder.Services.AddDbContext<PharmacyDbContext>(opt =>
-//                 opt.UseSqlServer(builder.Configuration.GetConnectionString("EFConnectionString")),ServiceLifetime.Scoped);
-
-builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(e => e.EnableAnnotations());
 builder.Services.AddTransient<IPharmacyService, PharmacyService>();
 builder.Services.AddTransient<IPharmacyRepository, PharmacyRepository>();
 
-
-builder.Services.Configure<AppSettingsConfiguraion>(builder.Configuration.GetSection("ConnectionStrings"));
+AppSettingsConfiguraion appConfig = new AppSettingsConfiguraion();
+builder.Configuration.GetSection("ConnectionStrings").Bind(appConfig);
+builder.Services.AddSingleton(appConfig);
 
 var app = builder.Build();
 
