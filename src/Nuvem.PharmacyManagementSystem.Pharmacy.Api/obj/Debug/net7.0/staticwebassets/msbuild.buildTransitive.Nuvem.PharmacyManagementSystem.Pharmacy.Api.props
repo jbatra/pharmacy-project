@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Nuvem.PharmacyManagementSystem.Pharmacy.Api.props" />
+</Project>
