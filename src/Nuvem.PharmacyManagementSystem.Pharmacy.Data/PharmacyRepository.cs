@@ -2,8 +2,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Nuvem.PharmacyManagementSystem.Pharmacy.Data.Data;
 
-namespace Nuvem.PharmacyManagementSystem.Pharmacy.Data
-{
+namespace Nuvem.PharmacyManagementSystem.Pharmacy.Data;
+
     public interface IPharmacyRepository
     {
         Task<List<EFEntities.Pharmacy>> GetAllAsync();
@@ -51,4 +51,3 @@ namespace Nuvem.PharmacyManagementSystem.Pharmacy.Data
             return existingPharmacy; 
         }
     }
-}

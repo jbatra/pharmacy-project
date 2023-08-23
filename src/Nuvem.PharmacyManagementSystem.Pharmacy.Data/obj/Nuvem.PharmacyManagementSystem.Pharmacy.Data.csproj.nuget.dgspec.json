@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Coding\\Github\\pharmacy-project\\pharmacy-project\\src\\Nuvem.PharmacyManagementSystem.Pharmacy.Data\\Nuvem.PharmacyManagementSystem.Pharmacy.Data.csproj": {}
+    "C:\\Coding\\Github\\pharmacy-project\\pharmacy-project\\src\\Nuvem.PharmacyManagementSystem.Pharmacy.Data\\Nuvem.PharmacyManagementSystem.Pharmacy.Data.csproj": {}
   },
   "projects": {
-    "c:\\Coding\\Github\\pharmacy-project\\pharmacy-project\\src\\Nuvem.PharmacyManagementSystem.Pharmacy.Data\\Nuvem.PharmacyManagementSystem.Pharmacy.Data.csproj": {
+    "C:\\Coding\\Github\\pharmacy-project\\pharmacy-project\\src\\Nuvem.PharmacyManagementSystem.Pharmacy.Data\\Nuvem.PharmacyManagementSystem.Pharmacy.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Coding\\Github\\pharmacy-project\\pharmacy-project\\src\\Nuvem.PharmacyManagementSystem.Pharmacy.Data\\Nuvem.PharmacyManagementSystem.Pharmacy.Data.csproj",
+        "projectUniqueName": "C:\\Coding\\Github\\pharmacy-project\\pharmacy-project\\src\\Nuvem.PharmacyManagementSystem.Pharmacy.Data\\Nuvem.PharmacyManagementSystem.Pharmacy.Data.csproj",
         "projectName": "Nuvem.PharmacyManagementSystem.Pharmacy.Data",
-        "projectPath": "c:\\Coding\\Github\\pharmacy-project\\pharmacy-project\\src\\Nuvem.PharmacyManagementSystem.Pharmacy.Data\\Nuvem.PharmacyManagementSystem.Pharmacy.Data.csproj",
+        "projectPath": "C:\\Coding\\Github\\pharmacy-project\\pharmacy-project\\src\\Nuvem.PharmacyManagementSystem.Pharmacy.Data\\Nuvem.PharmacyManagementSystem.Pharmacy.Data.csproj",
         "packagesPath": "C:\\Users\\jbatr\\.nuget\\packages\\",
-        "outputPath": "c:\\Coding\\Github\\pharmacy-project\\pharmacy-project\\src\\Nuvem.PharmacyManagementSystem.Pharmacy.Data\\obj\\",
+        "outputPath": "C:\\Coding\\Github\\pharmacy-project\\pharmacy-project\\src\\Nuvem.PharmacyManagementSystem.Pharmacy.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

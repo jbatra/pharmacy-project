@@ -10,10 +10,10 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
 Assembly apiAssembly = Assembly.GetExecutingAssembly();
 Assembly servicesAssembly = Assembly.Load("Nuvem.PharmacyManagementSystem.Pharmacy.Services");
 Assembly dataAssembly = Assembly.Load("Nuvem.PharmacyManagementSystem.Pharmacy.Data");
-
 builder.Services.AddAutoMapper(apiAssembly,servicesAssembly);
 
 builder.Services.AddDbContext<PharmacyDbContext>(options =>

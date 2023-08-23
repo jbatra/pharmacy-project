@@ -1,6 +1,6 @@
-
 using System.ComponentModel.DataAnnotations;
 
+namespace Nuvem.PharmacyManagementSystem.Pharmacy.Services.Models;
 public class PharmacyModel
 {
     

@@ -1,5 +1,6 @@
 using AutoMapper;
 using Nuvem.PharmacyManagementSystem.Pharmacy.Data;
+using Nuvem.PharmacyManagementSystem.Pharmacy.Services.Models;
 
 namespace Nuvem.PharmacyManagementSystem.Pharmacy.Services;
 public interface IPharmacyService

@@ -1,8 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 
-namespace Nuvem.PharmacyManagementSystem.Pharmacy.Data.Data
-{   
+namespace Nuvem.PharmacyManagementSystem.Pharmacy.Data.Data;
 public partial class PharmacyDbContext : DbContext
 {   
     public string connString {get; set;}
@@ -17,7 +16,10 @@ public partial class PharmacyDbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer(connString);
+        if(!optionsBuilder.IsConfigured)
+        {
+            optionsBuilder.UseSqlServer(connString);
+        }
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -31,4 +33,4 @@ public partial class PharmacyDbContext : DbContext
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 }
-}
+
