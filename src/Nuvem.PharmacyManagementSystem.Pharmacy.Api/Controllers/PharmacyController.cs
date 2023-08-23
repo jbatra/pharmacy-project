@@ -1,12 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Swashbuckle.AspNetCore.Annotations;
 using System.Net;
 using Nuvem.PharmacyManagementSystem.Pharmacy.Services;
-using Microsoft.AspNetCore.Http.HttpResults;
+using Nuvem.PharmacyManagementSystem.Pharmacy.Services.Models;
 
-namespace Nuvem.PharmacyManagementSystem.Pharmacy.Api.Controllers
-{
+namespace Nuvem.PharmacyManagementSystem.Pharmacy.Api.Controllers;
+
     [ApiController]
     [Route("[controller]")]
     public class PharmacyController : ControllerBase
@@ -50,7 +49,7 @@ namespace Nuvem.PharmacyManagementSystem.Pharmacy.Api.Controllers
         /// Update the Pharmacy
         /// </summary>
         /// <param name="id">PharmacyId</param>
-        /// <param name="pharmacyModel">Values to update the existing pharmacy</param>
+        /// <param name="">Values to update the existing pharmacy</param>
         /// <returns></returns>
         [HttpPut("{id}")]
         [SwaggerOperation("Updates Pharmacy")]
@@ -67,4 +66,3 @@ namespace Nuvem.PharmacyManagementSystem.Pharmacy.Api.Controllers
             return updatedPharmacy is null ? NotFound() : Ok(updatedPharmacy);            
         }            
     }
-}

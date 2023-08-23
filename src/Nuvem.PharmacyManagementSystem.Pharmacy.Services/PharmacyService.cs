@@ -1,5 +1,6 @@
 using AutoMapper;
 using Nuvem.PharmacyManagementSystem.Pharmacy.Data;
+using Nuvem.PharmacyManagementSystem.Pharmacy.Services.Models;
 
 namespace Nuvem.PharmacyManagementSystem.Pharmacy.Services;
 public interface IPharmacyService
@@ -13,7 +14,6 @@ public class PharmacyService : IPharmacyService
 {
     private readonly IPharmacyRepository _pharmacyRepository;
     private readonly IMapper _mapper;
-    //private readonly Mapper _PersonMapper;
 
     public PharmacyService(IPharmacyRepository pharmacyRepository, IMapper mapper)
     {
