@@ -24,7 +24,10 @@ namespace Nuvem.PharmacyManagementSystem.Pharmacy.Api.Controllers;
         [HttpGet]
         [SwaggerOperation("Get all Pharmacies")]
         [SwaggerResponse((int)HttpStatusCode.OK)]
-        public async Task<ActionResult<IEnumerable<PharmacyModel>>> GetAllAsync() => Ok(await _pharmacyService.GetAllAsync());
+        public async Task<ActionResult<IEnumerable<PharmacyModel>>> GetAllPharmacies()
+        {
+            return Ok(await _pharmacyService.GetAllAsync());
+        }
         
         /// <summary>
         /// Get pharmacy for given id
@@ -36,7 +39,7 @@ namespace Nuvem.PharmacyManagementSystem.Pharmacy.Api.Controllers;
         [SwaggerResponse((int)HttpStatusCode.OK)]
         [SwaggerResponse((int)HttpStatusCode.BadRequest)]
         [SwaggerResponse((int)HttpStatusCode.NotFound)]
-        public async Task<ActionResult<PharmacyModel>> GetByIdAsync(int id)
+        public async Task<ActionResult<PharmacyModel>> GetPharmacyById(int id)
         {
             if (id == 0)
                 return BadRequest();
@@ -56,7 +59,7 @@ namespace Nuvem.PharmacyManagementSystem.Pharmacy.Api.Controllers;
         [SwaggerResponse((int)HttpStatusCode.OK)]
         [SwaggerResponse((int)HttpStatusCode.BadRequest)]
         [SwaggerResponse((int)HttpStatusCode.NotFound)]
-        public async Task<ActionResult<PharmacyModel>> UpdatePharmacyAsync(int id, [FromBody]PharmacyModel pharmacyModel)
+        public async Task<ActionResult<PharmacyModel>> UpdatePharmacyById(int id, [FromBody]PharmacyModel pharmacyModel)
         {
             if (id == 0 || pharmacyModel.PharmacyId != id) return BadRequest();            
             
