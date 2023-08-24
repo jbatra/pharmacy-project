@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Coding\\Github\\pharmacy-project\\pharmacy-project\\src\\Nuvem.PharmacyManagementSystem.Pharmacy.Api\\Nuvem.PharmacyManagementSystem.Pharmacy.Api.csproj": {}
+    "c:\\Coding\\Github\\pharmacy-project\\pharmacy-project\\src\\Nuvem.PharmacyManagementSystem.Pharmacy.Api\\Nuvem.PharmacyManagementSystem.Pharmacy.Api.csproj": {}
   },
   "projects": {
-    "C:\\Coding\\Github\\pharmacy-project\\pharmacy-project\\src\\Nuvem.PharmacyManagementSystem.Pharmacy.Api\\Nuvem.PharmacyManagementSystem.Pharmacy.Api.csproj": {
+    "c:\\Coding\\Github\\pharmacy-project\\pharmacy-project\\src\\Nuvem.PharmacyManagementSystem.Pharmacy.Api\\Nuvem.PharmacyManagementSystem.Pharmacy.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Coding\\Github\\pharmacy-project\\pharmacy-project\\src\\Nuvem.PharmacyManagementSystem.Pharmacy.Api\\Nuvem.PharmacyManagementSystem.Pharmacy.Api.csproj",
+        "projectUniqueName": "c:\\Coding\\Github\\pharmacy-project\\pharmacy-project\\src\\Nuvem.PharmacyManagementSystem.Pharmacy.Api\\Nuvem.PharmacyManagementSystem.Pharmacy.Api.csproj",
         "projectName": "Nuvem.PharmacyManagementSystem.Pharmacy.Api",
-        "projectPath": "C:\\Coding\\Github\\pharmacy-project\\pharmacy-project\\src\\Nuvem.PharmacyManagementSystem.Pharmacy.Api\\Nuvem.PharmacyManagementSystem.Pharmacy.Api.csproj",
+        "projectPath": "c:\\Coding\\Github\\pharmacy-project\\pharmacy-project\\src\\Nuvem.PharmacyManagementSystem.Pharmacy.Api\\Nuvem.PharmacyManagementSystem.Pharmacy.Api.csproj",
         "packagesPath": "C:\\Users\\jbatr\\.nuget\\packages\\",
-        "outputPath": "C:\\Coding\\Github\\pharmacy-project\\pharmacy-project\\src\\Nuvem.PharmacyManagementSystem.Pharmacy.Api\\obj\\",
+        "outputPath": "c:\\Coding\\Github\\pharmacy-project\\pharmacy-project\\src\\Nuvem.PharmacyManagementSystem.Pharmacy.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -32,8 +32,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Coding\\Github\\pharmacy-project\\pharmacy-project\\src\\Nuvem.PharmacyManagementSystem.Pharmacy.Data\\Nuvem.PharmacyManagementSystem.Pharmacy.Data.csproj": {
-                "projectPath": "C:\\Coding\\Github\\pharmacy-project\\pharmacy-project\\src\\Nuvem.PharmacyManagementSystem.Pharmacy.Data\\Nuvem.PharmacyManagementSystem.Pharmacy.Data.csproj"
+              "c:\\Coding\\Github\\pharmacy-project\\pharmacy-project\\src\\Nuvem.PharmacyManagementSystem.Pharmacy.Data\\Nuvem.PharmacyManagementSystem.Pharmacy.Data.csproj": {
+                "projectPath": "c:\\Coding\\Github\\pharmacy-project\\pharmacy-project\\src\\Nuvem.PharmacyManagementSystem.Pharmacy.Data\\Nuvem.PharmacyManagementSystem.Pharmacy.Data.csproj"
               },
               "c:\\Coding\\Github\\pharmacy-project\\pharmacy-project\\src\\Nuvem.PharmacyManagementSystem.Pharmacy.Services\\Nuvem.PharmacyManagementSystem.Pharmacy.Services.csproj": {
                 "projectPath": "c:\\Coding\\Github\\pharmacy-project\\pharmacy-project\\src\\Nuvem.PharmacyManagementSystem.Pharmacy.Services\\Nuvem.PharmacyManagementSystem.Pharmacy.Services.csproj"
@@ -93,14 +93,14 @@
         }
       }
     },
-    "C:\\Coding\\Github\\pharmacy-project\\pharmacy-project\\src\\Nuvem.PharmacyManagementSystem.Pharmacy.Data\\Nuvem.PharmacyManagementSystem.Pharmacy.Data.csproj": {
+    "c:\\Coding\\Github\\pharmacy-project\\pharmacy-project\\src\\Nuvem.PharmacyManagementSystem.Pharmacy.Data\\Nuvem.PharmacyManagementSystem.Pharmacy.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Coding\\Github\\pharmacy-project\\pharmacy-project\\src\\Nuvem.PharmacyManagementSystem.Pharmacy.Data\\Nuvem.PharmacyManagementSystem.Pharmacy.Data.csproj",
+        "projectUniqueName": "c:\\Coding\\Github\\pharmacy-project\\pharmacy-project\\src\\Nuvem.PharmacyManagementSystem.Pharmacy.Data\\Nuvem.PharmacyManagementSystem.Pharmacy.Data.csproj",
         "projectName": "Nuvem.PharmacyManagementSystem.Pharmacy.Data",
-        "projectPath": "C:\\Coding\\Github\\pharmacy-project\\pharmacy-project\\src\\Nuvem.PharmacyManagementSystem.Pharmacy.Data\\Nuvem.PharmacyManagementSystem.Pharmacy.Data.csproj",
+        "projectPath": "c:\\Coding\\Github\\pharmacy-project\\pharmacy-project\\src\\Nuvem.PharmacyManagementSystem.Pharmacy.Data\\Nuvem.PharmacyManagementSystem.Pharmacy.Data.csproj",
         "packagesPath": "C:\\Users\\jbatr\\.nuget\\packages\\",
-        "outputPath": "C:\\Coding\\Github\\pharmacy-project\\pharmacy-project\\src\\Nuvem.PharmacyManagementSystem.Pharmacy.Data\\obj\\",
+        "outputPath": "c:\\Coding\\Github\\pharmacy-project\\pharmacy-project\\src\\Nuvem.PharmacyManagementSystem.Pharmacy.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -202,8 +202,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Coding\\Github\\pharmacy-project\\pharmacy-project\\src\\Nuvem.PharmacyManagementSystem.Pharmacy.Data\\Nuvem.PharmacyManagementSystem.Pharmacy.Data.csproj": {
-                "projectPath": "C:\\Coding\\Github\\pharmacy-project\\pharmacy-project\\src\\Nuvem.PharmacyManagementSystem.Pharmacy.Data\\Nuvem.PharmacyManagementSystem.Pharmacy.Data.csproj"
+              "c:\\Coding\\Github\\pharmacy-project\\pharmacy-project\\src\\Nuvem.PharmacyManagementSystem.Pharmacy.Data\\Nuvem.PharmacyManagementSystem.Pharmacy.Data.csproj": {
+                "projectPath": "c:\\Coding\\Github\\pharmacy-project\\pharmacy-project\\src\\Nuvem.PharmacyManagementSystem.Pharmacy.Data\\Nuvem.PharmacyManagementSystem.Pharmacy.Data.csproj"
               }
             }
           }

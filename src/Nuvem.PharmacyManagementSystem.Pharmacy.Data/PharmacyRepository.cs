@@ -12,12 +12,12 @@ namespace Nuvem.PharmacyManagementSystem.Pharmacy.Data;
     }
     public class PharmacyRepository : IPharmacyRepository
     {
-        private readonly PharmacyDbContext _dbContext;
+        private readonly IPharmacyDbContext _dbContext;
         private readonly AppSettingsConfiguraion _appConfig;
         
-        public PharmacyRepository(AppSettingsConfiguraion appConfig)
+        public PharmacyRepository(IPharmacyDbContext dbContext, AppSettingsConfiguraion appConfig)
         {
-            _dbContext = new PharmacyDbContext();  
+            _dbContext = dbContext;  
             _appConfig = appConfig;
             _dbContext.connString = _appConfig.EFConnectionString;
         }        
@@ -41,7 +41,7 @@ namespace Nuvem.PharmacyManagementSystem.Pharmacy.Data;
 
             _dbContext.Pharmacies.Attach(existingPharmacy);
 
-            var entry = _dbContext.Entry(existingPharmacy);
+            var entry = _dbContext.Instance.Entry(existingPharmacy);
             entry.CurrentValues.SetValues(pharmacy);
 
             entry.Property("PharmacyId").IsModified = false;

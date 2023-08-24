@@ -1,9 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 
 namespace Nuvem.PharmacyManagementSystem.Pharmacy.Data.Data;
-public partial class PharmacyDbContext : DbContext
+public partial class PharmacyDbContext : DbContext, IPharmacyDbContext
+
 {   
+    public DbContext Instance => this;
     public string connString {get; set;}
     public PharmacyDbContext()
     {}
@@ -13,7 +14,6 @@ public partial class PharmacyDbContext : DbContext
     {}
 
     public virtual DbSet<EFEntities.Pharmacy> Pharmacies { get; set; }
-
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         if(!optionsBuilder.IsConfigured)
@@ -30,7 +30,12 @@ public partial class PharmacyDbContext : DbContext
 
         OnModelCreatingPartial(modelBuilder);
     }
-
+    
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+
+    public Task<int> SaveChangesAsync()
+    {
+        return base.SaveChangesAsync();
+    }
 }
 
