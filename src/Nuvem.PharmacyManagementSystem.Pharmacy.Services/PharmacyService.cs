@@ -1,4 +1,4 @@
-using AutoMapper;
+
 using PharmacyEntity = Nuvem.PharmacyManagementSystem.Pharmacy.Data.DatabaseContext.EFEntities.Pharmacy;
 using Nuvem.PharmacyManagementSystem.Pharmacy.Data;
 using Nuvem.PharmacyManagementSystem.Pharmacy.Services.Models;
@@ -14,12 +14,10 @@ public interface IPharmacyService
 public class PharmacyService : IPharmacyService
 {
     private readonly IPharmacyRepository _pharmacyRepository;
-    private readonly IMapper _mapper;
 
-    public PharmacyService(IPharmacyRepository pharmacyRepository, IMapper mapper)
+    public PharmacyService(IPharmacyRepository pharmacyRepository)
     {
-        _pharmacyRepository = pharmacyRepository;
-        _mapper = mapper;
+        _pharmacyRepository = pharmacyRepository;        
     }
 
     public async Task<List<PharmacyModel>> GetAllAsync()
@@ -48,7 +46,7 @@ public class PharmacyService : IPharmacyService
     {
         var pharmacyToBeUpdated = MappingHelper<PharmacyEntity,PharmacyModel>.Map(pharmacy);
 
-        var updatedPharmacy = await _pharmacyRepository.UpdatePharmacyAsync(pharmacyToBeUpdated);//(_mapper.Map<PharmacyModel,PharmacyEntity>(pharmacy));
+        var updatedPharmacy = await _pharmacyRepository.UpdatePharmacyAsync(pharmacyToBeUpdated);
         
         if(updatedPharmacy is null) return null;
 
