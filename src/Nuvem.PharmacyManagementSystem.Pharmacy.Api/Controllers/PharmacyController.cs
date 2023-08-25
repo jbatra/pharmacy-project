@@ -16,36 +16,22 @@ namespace Nuvem.PharmacyManagementSystem.Pharmacy.Api.Controllers;
             _pharmacyService = pharmacyService;
         }
 
-        // GET all action
-        /// <summary>
-        /// Get all the pharmacies
-        /// </summary>
-        /// <returns>List of all the Pharmacies</returns>
         [HttpGet]
-        [SwaggerOperation("Get all Pharmacies")]
-        [SwaggerResponse((int)HttpStatusCode.OK)]
-        public async Task<ActionResult<IEnumerable<PharmacyModel>>> GetAllPharmacies()
-        {
-            return Ok(await _pharmacyService.GetAllAsync());
-        }
-        
-        /// <summary>
-        /// Get pharmacy for given id
-        /// </summary>
-        /// <param name="id">PharmacyId</param>
-        /// <returns>Pharmacy</returns>
         [HttpGet("{id}")]
-        [SwaggerOperation("Get Pharmacy by Id")]
+        [SwaggerOperation("Get Pharmacy(s)")]
         [SwaggerResponse((int)HttpStatusCode.OK)]
-        [SwaggerResponse((int)HttpStatusCode.BadRequest)]
         [SwaggerResponse((int)HttpStatusCode.NotFound)]
-        public async Task<ActionResult<PharmacyModel>> GetPharmacyById(int id)
+        public async Task<ActionResult> GetPharmacies(int? id=null)
         {
-            if (id == 0)
-                return BadRequest();
-                
-            PharmacyModel pharmacy = await _pharmacyService.GetPharmacyByIdAsync(id);
-            return pharmacy is null ? NotFound() : Ok(pharmacy);
+            if(id is null)
+            {
+                return Ok(await _pharmacyService.GetAllAsync());
+            }
+            else
+            {
+                PharmacyModel pharmacy = await _pharmacyService.GetPharmacyByIdAsync(id.GetValueOrDefault());
+                return pharmacy is null ? NotFound() : Ok(pharmacy);
+            }
         }
 
         /// <summary>
@@ -59,9 +45,9 @@ namespace Nuvem.PharmacyManagementSystem.Pharmacy.Api.Controllers;
         [SwaggerResponse((int)HttpStatusCode.OK)]
         [SwaggerResponse((int)HttpStatusCode.BadRequest)]
         [SwaggerResponse((int)HttpStatusCode.NotFound)]
-        public async Task<ActionResult<PharmacyModel>> UpdatePharmacyById(int id, [FromBody]PharmacyModel pharmacyModel)
+        public async Task<ActionResult> UpdatePharmacyById(int id, [FromBody]PharmacyModel pharmacyModel)
         {
-            if (id == 0 || pharmacyModel.PharmacyId != id) return BadRequest();            
+            if (id == 0 || pharmacyModel.PharmacyId != id) return BadRequest("Pharmacy id not correct!");            
             
             if(!ModelState.IsValid) return BadRequest(ModelState);
 

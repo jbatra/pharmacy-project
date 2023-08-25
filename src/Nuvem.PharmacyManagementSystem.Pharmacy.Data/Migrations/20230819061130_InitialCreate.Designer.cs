@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Nuvem.PharmacyManagementSystem.Pharmacy.Data.Data;
+using Nuvem.PharmacyManagementSystem.Pharmacy.Data.DatabaseContext;
 
 #nullable disable
 

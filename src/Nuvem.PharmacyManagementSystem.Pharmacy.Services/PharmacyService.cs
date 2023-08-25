@@ -1,4 +1,5 @@
-using AutoMapper;
+
+using PharmacyEntity = Nuvem.PharmacyManagementSystem.Pharmacy.Data.DatabaseContext.EFEntities.Pharmacy;
 using Nuvem.PharmacyManagementSystem.Pharmacy.Data;
 using Nuvem.PharmacyManagementSystem.Pharmacy.Services.Models;
 
@@ -13,34 +14,42 @@ public interface IPharmacyService
 public class PharmacyService : IPharmacyService
 {
     private readonly IPharmacyRepository _pharmacyRepository;
-    private readonly IMapper _mapper;
 
-    public PharmacyService(IPharmacyRepository pharmacyRepository, IMapper mapper)
+    public PharmacyService(IPharmacyRepository pharmacyRepository)
     {
-        _pharmacyRepository = pharmacyRepository;
-        _mapper = mapper;
+        _pharmacyRepository = pharmacyRepository;        
     }
 
     public async Task<List<PharmacyModel>> GetAllAsync()
     {     
-        List<Data.EFEntities.Pharmacy> pharmacyList = await _pharmacyRepository.GetAllAsync();
-        return _mapper.Map<List<PharmacyModel>>(pharmacyList);
+        List<PharmacyEntity> pharmacyList = await _pharmacyRepository.GetAllPharmaciesAsync();
+        
+        if(pharmacyList is null) return null;
+        List<PharmacyModel> resultList = new();
+        foreach(var pharmacy in pharmacyList)
+        {
+            var ph = MappingHelper<PharmacyModel,PharmacyEntity>.Map(pharmacy);
+            resultList.Add(ph);
+        }
+        return resultList;
     } 
     public async Task<PharmacyModel?> GetPharmacyByIdAsync(int id)
     {
-        Data.EFEntities.Pharmacy pharmacy = await _pharmacyRepository.GetPharmacyByIdAsync(id);
+        PharmacyEntity? pharmacy = await _pharmacyRepository.GetPharmacyByIdAsync(id);
         
         if(pharmacy is null) return null;
 
-        return _mapper.Map<Data.EFEntities.Pharmacy, PharmacyModel>(pharmacy);
+        return  MappingHelper<PharmacyModel,PharmacyEntity>.Map(pharmacy);
     }
 
     public async Task<PharmacyModel?> UpdatePharmacyAsync(PharmacyModel pharmacy)
     {
-        var updatedPharmacy = await _pharmacyRepository.UpdatePharmacyAsync(_mapper.Map<PharmacyModel,Data.EFEntities.Pharmacy>(pharmacy));
+        var pharmacyToBeUpdated = MappingHelper<PharmacyEntity,PharmacyModel>.Map(pharmacy);
+
+        var updatedPharmacy = await _pharmacyRepository.UpdatePharmacyAsync(pharmacyToBeUpdated);
         
         if(updatedPharmacy is null) return null;
 
-        return _mapper.Map<Data.EFEntities.Pharmacy, PharmacyModel>(updatedPharmacy);
+        return  MappingHelper<PharmacyModel,PharmacyEntity>.Map(updatedPharmacy);
     }
 }

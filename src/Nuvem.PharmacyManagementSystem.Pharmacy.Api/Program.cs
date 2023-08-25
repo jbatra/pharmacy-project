@@ -3,7 +3,7 @@ using System.Reflection;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Nuvem.PharmacyManagementSystem.Pharmacy.Data;
-using Nuvem.PharmacyManagementSystem.Pharmacy.Data.Data;
+using Nuvem.PharmacyManagementSystem.Pharmacy.Data.DatabaseContext;
 using Nuvem.PharmacyManagementSystem.Pharmacy.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,13 +15,7 @@ builder.Services.AddControllers(options  =>
     options.Filters.Add(new ConsumesAttribute("application/json"));
 });
 
-
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-
-Assembly apiAssembly = Assembly.GetExecutingAssembly();
-Assembly servicesAssembly = Assembly.Load("Nuvem.PharmacyManagementSystem.Pharmacy.Services");
-Assembly dataAssembly = Assembly.Load("Nuvem.PharmacyManagementSystem.Pharmacy.Data");
-builder.Services.AddAutoMapper(apiAssembly,servicesAssembly);
 
 builder.Services.AddScoped<IPharmacyDbContext, PharmacyDbContext>();
 
@@ -32,6 +26,7 @@ builder.Services.AddDbContext<PharmacyDbContext>(options =>
 builder.Services.AddSwaggerGen(e => e.EnableAnnotations());
 builder.Services.AddTransient<IPharmacyService, PharmacyService>();
 builder.Services.AddTransient<IPharmacyRepository, PharmacyRepository>();
+
 
 AppSettingsConfiguraion appConfig = new AppSettingsConfiguraion();
 builder.Configuration.GetSection("ConnectionStrings").Bind(appConfig);
