@@ -1,11 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using PharmacyEntity = Nuvem.PharmacyManagementSystem.Pharmacy.Data.DatabaseContext.EFEntities.Pharmacy;
 
-namespace Nuvem.PharmacyManagementSystem.Pharmacy.Data.Data;
+namespace Nuvem.PharmacyManagementSystem.Pharmacy.Data.DatabaseContext;
 public partial class PharmacyDbContext : DbContext, IPharmacyDbContext
 
 {   
     public DbContext Instance => this;
-    public string connString {get; set;}
+    public string? connString {get; set;}
     public PharmacyDbContext()
     {}
 
@@ -13,7 +14,7 @@ public partial class PharmacyDbContext : DbContext, IPharmacyDbContext
         : base(options)
     {}
 
-    public virtual DbSet<EFEntities.Pharmacy> Pharmacies { get; set; }
+    public virtual DbSet<PharmacyEntity> Pharmacies { get; set; }
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         if(!optionsBuilder.IsConfigured)
@@ -23,7 +24,7 @@ public partial class PharmacyDbContext : DbContext, IPharmacyDbContext
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<EFEntities.Pharmacy>(entity =>
+        modelBuilder.Entity<PharmacyEntity>(entity =>
         {
             entity.HasKey(e => e.PharmacyId).HasName("PK_dbo.Pharmacy");
         });

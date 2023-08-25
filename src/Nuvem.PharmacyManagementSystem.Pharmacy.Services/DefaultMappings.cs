@@ -1,4 +1,5 @@
 using AutoMapper;
+using PharmacyEntity = Nuvem.PharmacyManagementSystem.Pharmacy.Data.DatabaseContext.EFEntities.Pharmacy;
 using Nuvem.PharmacyManagementSystem.Pharmacy.Services.Models;
 
 namespace Nuvem.PharmacyManagementSystem.Pharmacy.Services;
@@ -6,6 +7,7 @@ namespace Nuvem.PharmacyManagementSystem.Pharmacy.Services;
     {
         public DefaultMappings()
         {
-            CreateMap<Data.EFEntities.Pharmacy, PharmacyModel>().ReverseMap();
+            CreateMap<PharmacyEntity, PharmacyModel>().ReverseMap();
         }
+        
     }

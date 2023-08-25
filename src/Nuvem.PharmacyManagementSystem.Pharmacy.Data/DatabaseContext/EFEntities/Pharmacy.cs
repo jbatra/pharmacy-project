@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
-namespace Nuvem.PharmacyManagementSystem.Pharmacy.Data.EFEntities;
+namespace Nuvem.PharmacyManagementSystem.Pharmacy.Data.DatabaseContext.EFEntities;
 
 [Table("Pharmacy")]
 public partial class Pharmacy

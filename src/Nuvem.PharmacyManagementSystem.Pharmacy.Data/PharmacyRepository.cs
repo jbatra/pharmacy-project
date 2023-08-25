@@ -1,14 +1,14 @@
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
-using Nuvem.PharmacyManagementSystem.Pharmacy.Data.Data;
+using PharmacyEntity = Nuvem.PharmacyManagementSystem.Pharmacy.Data.DatabaseContext.EFEntities.Pharmacy;
+using Nuvem.PharmacyManagementSystem.Pharmacy.Data.DatabaseContext;
 
 namespace Nuvem.PharmacyManagementSystem.Pharmacy.Data;
 
     public interface IPharmacyRepository
     {
-        Task<List<EFEntities.Pharmacy>> GetAllAsync();
-        Task<EFEntities.Pharmacy?> GetPharmacyByIdAsync(int id);
-        Task<EFEntities.Pharmacy?> UpdatePharmacyAsync(EFEntities.Pharmacy pharmacy);      
+        Task<List<PharmacyEntity>> GetAllPharmaciesAsync();
+        Task<PharmacyEntity?> GetPharmacyByIdAsync(int id);
+        Task<PharmacyEntity?> UpdatePharmacyAsync(PharmacyEntity pharmacy);      
     }
     public class PharmacyRepository : IPharmacyRepository
     {
@@ -22,18 +22,17 @@ namespace Nuvem.PharmacyManagementSystem.Pharmacy.Data;
             _dbContext.connString = _appConfig.EFConnectionString;
         }        
 
-        public async Task<List<EFEntities.Pharmacy>> GetAllAsync()
+        public async Task<List<PharmacyEntity>> GetAllPharmaciesAsync()
         {
             return await Task.FromResult( _dbContext.Pharmacies.ToList());
         }
 
-
-        public Task<EFEntities.Pharmacy?> GetPharmacyByIdAsync(int id)
+        public Task<PharmacyEntity?> GetPharmacyByIdAsync(int id)
         {
             return _dbContext.Pharmacies.FirstOrDefaultAsync(x => x.PharmacyId == id);
         }
 
-        public async Task<EFEntities.Pharmacy?> UpdatePharmacyAsync(EFEntities.Pharmacy pharmacy)
+        public async Task<PharmacyEntity?> UpdatePharmacyAsync(PharmacyEntity pharmacy)
         {
             var existingPharmacy = await GetPharmacyByIdAsync(pharmacy.PharmacyId);
             if (existingPharmacy is null) return null;
